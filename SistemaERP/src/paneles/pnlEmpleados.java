@@ -35,22 +35,21 @@ public class pnlEmpleados extends javax.swing.JPanel {
         btnAgregar = new rsbuttom.RSButtonMetro();
         jPanel2 = new javax.swing.JPanel();
         txtNombre = new javax.swing.JTextField();
-        txtTelefono = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txtDireccion = new javax.swing.JTextField();
         btnCancelar = new rsbuttom.RSButtonMetro();
         btnAceptar = new rsbuttom.RSButtonMetro();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtDireccion = new javax.swing.JTextArea();
+        txtTelefono = new javax.swing.JFormattedTextField();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-
-        setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -89,11 +88,8 @@ public class pnlEmpleados extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 620, 37));
-
-        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 620, 37));
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 620, 40));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setText("Teléfono:");
@@ -101,38 +97,51 @@ public class pnlEmpleados extends javax.swing.JPanel {
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel8.setText("Nombre:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 7, 110, 30));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 110, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel9.setText("Email:");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 10, 110, 30));
 
-        txtEmail.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 40, 620, 37));
+        txtEmail.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 40, 620, 40));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel10.setText("Dirección:");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 110, 30));
 
-        txtDireccion.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, 620, 37));
-
-        btnCancelar.setBackground(new java.awt.Color(79, 79, 79));
         btnCancelar.setText("Cancelar");
         btnCancelar.setToolTipText("Cancelar.");
-        btnCancelar.setColorHover(new java.awt.Color(154, 154, 154));
+        btnCancelar.setColorHover(new java.awt.Color(0, 0, 0));
         btnCancelar.setColorNormal(new java.awt.Color(79, 79, 79));
+        btnCancelar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 160, 150, 40));
 
-        btnAceptar.setBackground(new java.awt.Color(79, 79, 79));
         btnAceptar.setText("Aceptar");
         btnAceptar.setToolTipText("Guardar cambios.");
-        btnAceptar.setColorHover(new java.awt.Color(154, 154, 154));
+        btnAceptar.setColorHover(new java.awt.Color(0, 0, 0));
         btnAceptar.setColorNormal(new java.awt.Color(79, 79, 79));
+        btnAceptar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel2.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 160, 150, 40));
+
+        txtDireccion.setColumns(20);
+        txtDireccion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtDireccion.setRows(2);
+        jScrollPane2.setViewportView(txtDireccion);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, 620, 40));
+
+        try {
+            txtTelefono.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 620, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -232,11 +241,12 @@ public class pnlEmpleados extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtBuscar;
-    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextArea txtDireccion;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JFormattedTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }

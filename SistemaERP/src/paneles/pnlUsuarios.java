@@ -48,8 +48,6 @@ public class pnlUsuarios extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -101,18 +99,18 @@ public class pnlUsuarios extends javax.swing.JPanel {
         txtContraseña.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jPanel2.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 300, 37));
 
-        btnCancelar.setBackground(new java.awt.Color(79, 79, 79));
         btnCancelar.setText("Cancelar");
         btnCancelar.setToolTipText("Cancelar.");
-        btnCancelar.setColorHover(new java.awt.Color(154, 154, 154));
+        btnCancelar.setColorHover(new java.awt.Color(0, 0, 0));
         btnCancelar.setColorNormal(new java.awt.Color(79, 79, 79));
+        btnCancelar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 40, 150, 40));
 
-        btnAceptar.setBackground(new java.awt.Color(79, 79, 79));
         btnAceptar.setText("Aceptar");
         btnAceptar.setToolTipText("Guardar cambios.");
-        btnAceptar.setColorHover(new java.awt.Color(154, 154, 154));
+        btnAceptar.setColorHover(new java.awt.Color(0, 0, 0));
         btnAceptar.setColorNormal(new java.awt.Color(79, 79, 79));
+        btnAceptar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel2.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 40, 150, 40));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -125,6 +123,7 @@ public class pnlUsuarios extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

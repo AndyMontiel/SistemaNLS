@@ -16,9 +16,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-        this.setLocationRelativeTo(this);
-        
-        
+        this.setLocationRelativeTo(null);      
     }
 
     /**
@@ -50,16 +48,18 @@ public class Principal extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1536, 899));
         setName("FormularioERP"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1558, 907));
+        setPreferredSize(new java.awt.Dimension(1550, 900));
+        setResizable(false);
 
         pnlPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         pnlPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlTop.setBackground(new java.awt.Color(0, 200, 255));
+        pnlTop.setForeground(new java.awt.Color(0, 200, 255));
+        pnlTop.setToolTipText("");
 
         btnCerrarSesion.setBackground(new java.awt.Color(0, 200, 255));
         btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salir.png"))); // NOI18N
-        btnCerrarSesion.setText("Cerrar Sesión");
         btnCerrarSesion.setColorHover(new java.awt.Color(0, 200, 255));
         btnCerrarSesion.setColorNormal(new java.awt.Color(0, 200, 255));
         btnCerrarSesion.setColorPressed(new java.awt.Color(0, 200, 255));
@@ -74,9 +74,9 @@ public class Principal extends javax.swing.JFrame {
         pnlTopLayout.setHorizontalGroup(
             pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTopLayout.createSequentialGroup()
-                .addContainerGap(1364, Short.MAX_VALUE)
-                .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addContainerGap(1452, Short.MAX_VALUE)
+                .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52))
         );
         pnlTopLayout.setVerticalGroup(
             pnlTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,9 +86,10 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlPrincipal.add(pnlTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 70));
+        pnlPrincipal.add(pnlTop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1550, 70));
 
         pnlSliding.setBackground(new java.awt.Color(79, 79, 79));
+        pnlSliding.setForeground(new java.awt.Color(79, 79, 79));
 
         pnlMenuSliding.setBackground(new java.awt.Color(79, 79, 79));
 
@@ -212,7 +213,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlSlidingLayout = new javax.swing.GroupLayout(pnlSliding);
@@ -232,7 +233,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlPrincipal.add(pnlSliding, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 180, 790));
+        pnlPrincipal.add(pnlSliding, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 180, 820));
 
         pnlContenedor.setBackground(new java.awt.Color(255, 255, 255));
         pnlContenedor.setLayout(new javax.swing.BoxLayout(pnlContenedor, javax.swing.BoxLayout.LINE_AXIS));
@@ -283,7 +284,7 @@ public class Principal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

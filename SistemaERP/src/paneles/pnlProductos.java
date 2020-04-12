@@ -53,8 +53,6 @@ public class pnlProductos extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -92,35 +90,37 @@ public class pnlProductos extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 440, 37));
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 440, 40));
 
-        txtCodigoIn.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtCodigoIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 440, 37));
+        txtCodigoIn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtCodigoIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 440, 40));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setText("Código Interno:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 160, 30));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 160, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel8.setText("Nombre:");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 110, 30));
 
-        txtMargen.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtMargen, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 40, 440, 37));
+        txtMargen.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtMargen, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 40, 440, 40));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel10.setText("Código de Barras:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 80, 160, 30));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 90, 160, 30));
 
-        txtCodigoBarra.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel2.add(txtCodigoBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 110, 440, 37));
+        txtCodigoBarra.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtCodigoBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 120, 440, 40));
 
         btnCancelar.setBackground(new java.awt.Color(79, 79, 79));
         btnCancelar.setText("Cancelar");
         btnCancelar.setToolTipText("Cancelar.");
-        btnCancelar.setColorHover(new java.awt.Color(154, 154, 154));
+        btnCancelar.setColorHover(new java.awt.Color(0, 0, 0));
         btnCancelar.setColorNormal(new java.awt.Color(79, 79, 79));
+        btnCancelar.setColorPressed(new java.awt.Color(79, 79, 79));
+        btnCancelar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 230, 150, 40));
 
         btnImagen.setBackground(new java.awt.Color(79, 79, 79));
@@ -141,8 +141,10 @@ public class pnlProductos extends javax.swing.JPanel {
         btnAceptar.setBackground(new java.awt.Color(79, 79, 79));
         btnAceptar.setText("Aceptar");
         btnAceptar.setToolTipText("Guardar cambios.");
-        btnAceptar.setColorHover(new java.awt.Color(154, 154, 154));
+        btnAceptar.setColorHover(new java.awt.Color(0, 0, 0));
         btnAceptar.setColorNormal(new java.awt.Color(79, 79, 79));
+        btnAceptar.setColorPressed(new java.awt.Color(79, 79, 79));
+        btnAceptar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel2.add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 230, 150, 40));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -151,6 +153,7 @@ public class pnlProductos extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
